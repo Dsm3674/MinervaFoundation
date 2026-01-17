@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #3bb6ff;
+  color: #0b1c2d;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 40px;
+}
+
+
+.about-section {
+  text-align: center;
+}
+
+.globe {
+  width: 300px;
+  margin: 0 auto 40px;
+}
+
+.globe-bg {
+  fill: #1a2cff;
+}
+
+.continent {
+  fill: #7fd4ff;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.foundation-name {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* ---------- MISSION ---------- */
+.mission-section {
+  background: #2a8cff;
+  text-align: center;
+}
+
+.book {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.page {
+  width: 45%;
+  padding: 30px;
+  background: #e9f6ff;
+  border: 3px solid #000;
+}
+
+.left-page {
+  border-right: none;
+}
+
+.right-page {
+  border-left: none;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#values {
+  margin-top: 30px;
+  list-style: none;
+}
+
+#values li {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
