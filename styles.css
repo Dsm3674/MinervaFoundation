@@ -1,4 +1,4 @@
-/* ================= VARIABLES & RESET ================= */
+
 :root {
   /* Dark Blue Palette */
   --b950: #030712;
@@ -49,7 +49,7 @@ body {
   position: relative;
 }
 
-/* ================= UTILITIES ================= */
+
 .container {
   width: min(1200px, 90%);
   margin: 0 auto;
@@ -90,7 +90,7 @@ body {
   pointer-events: none;
 }
 
-/* ================= TYPOGRAPHY ================= */
+
 .title {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 800;
@@ -130,7 +130,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ================= NAVIGATION ================= */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -216,7 +216,7 @@ body {
   transition: 0.3s;
 }
 
-/* ================= BUTTONS ================= */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -371,7 +371,7 @@ body {
   margin-top: 5px;
 }
 
-/* ================= MISSION (Book) ================= */
+
 .mission-section {
   background: radial-gradient(circle at top center, #11254a 0%, #030712 60%);
 }
@@ -477,7 +477,7 @@ body {
 
 .check { color: var(--b300); }
 
-/* ================= PROGRAMS CARDS ================= */
+
 .program-card {
   background: var(--glass-bg);
   border: 1px solid var(--border-light);
@@ -552,7 +552,7 @@ body {
   left: 0;
 }
 
-/* ================= STORIES CAROUSEL ================= */
+
 .carousel-container {
   position: relative;
   max-width: 800px;
@@ -670,7 +670,7 @@ body {
 
 .carousel-indicator.current-slide { background: var(--b300); }
 
-/* ================= CONTACT ================= */
+
 .contact-section { background: rgba(5, 10, 20, 0.5); }
 
 .info-item {
@@ -725,7 +725,7 @@ body {
 .success { color: #4ade80; }
 .error { color: #f87171; }
 
-/* ================= FOOTER ================= */
+
 .footer {
   background: var(--b950);
   border-top: 1px solid var(--border-light);
@@ -776,7 +776,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* ================= ANIMATION UTILS ================= */
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -801,7 +801,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ================= RESPONSIVE ================= */
+
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
   .about-text { margin: 0 auto 2rem; }
