@@ -2,77 +2,392 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Minerva Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Minerva Foundation - Empowering rural education through technology and mentorship." />
+  <title>Minerva Foundation | Empowering Future Leaders</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Preload fonts for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
 
- 
-  <section id="about" class="section about-section">
+  <!-- Dynamic Background -->
+  <canvas id="starfield"></canvas>
 
-    <div class="globe-container">
-      <svg viewBox="0 0 400 400" class="globe">
-        <circle cx="200" cy="200" r="180" class="globe-bg" />
-        <path class="continent" d="M140 130 C160 110 200 120 210 140 C220 160 190 180 170 170 Z"/>
-        <path class="continent" d="M240 220 C260 210 290 220 300 250 C270 260 250 250 Z"/>
-      </svg>
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span>Minerva</span>
+      </a>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#mission" class="nav-link">Mission</a>
+        <a href="#programs" class="nav-link">Programs</a>
+        <a href="#stories" class="nav-link">Stories</a>
+        <a href="#contact" class="nav-link btn-highlight">Get Involved</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
+  </nav>
 
-    <h1 class="title">About</h1>
-    <h2 class="foundation-name">Minerva Foundation</h2>
+  <!-- ================= HERO / ABOUT SECTION ================= -->
+  <header id="about" class="section about-section">
+    <div class="container relative-z">
+      
+      <div class="hero-grid">
+        <div class="hero-content fade-up">
+          <div class="kicker">Est. 2014</div>
+          <h1 class="title">Bridging the <br/><span class="text-gradient">Digital Divide</span></h1>
+          <h2 class="foundation-name">Minerva Foundation</h2>
+          
+          <div class="typewriter-container">
+            <p id="typewriter" class="about-text"></p>
+            <span class="cursor">|</span>
+          </div>
 
-    <p id="typewriter" class="about-text"></p>
+          <div class="cta-group">
+            <a href="#mission" class="btn btn-primary">Our Mission</a>
+            <a href="#programs" class="btn btn-secondary">View Programs</a>
+          </div>
+        </div>
 
-    <div class="stats">
-      <div class="stat">
-        <span class="number" data-target="1000">0</span>
-        <span class="label">Students Impacted</span>
+        <div class="globe-wrapper fade-up delay-100">
+          <div class="globe-container">
+            <svg viewBox="0 0 400 400" class="globe">
+              <defs>
+                <radialGradient id="globeGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" style="stop-color:rgb(31, 79, 163);stop-opacity:0.2" />
+                  <stop offset="100%" style="stop-color:rgb(5, 10, 20);stop-opacity:0" />
+                </radialGradient>
+              </defs>
+              <circle cx="200" cy="200" r="180" class="globe-bg" fill="url(#globeGrad)" />
+              <path class="continent" d="M140 130 C160 110 200 120 210 140 C220 160 190 180 170 170 Z"/>
+              <path class="continent" d="M240 220 C260 210 290 220 300 250 C270 260 250 250 Z"/>
+              <path class="continent" d="M100 250 C120 240 150 260 140 290 C110 300 90 280 100 250 Z"/>
+              <circle cx="170" cy="150" r="3" class="ping" />
+            </svg>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <span class="number" data-target="50">0</span>
-        <span class="label">Rural Communities</span>
+
+      <div class="stats-row fade-up delay-200">
+        <div class="stat">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <span class="number" data-target="1000">0</span>
+          <span class="label">Students Impacted</span>
+        </div>
+        <div class="stat">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.66a2 2 0 0 0-2-2h-2.65a2 2 0 0 0-2 2V21"/></svg>
+          </div>
+          <span class="number" data-target="50">0</span>
+          <span class="label">Rural Schools</span>
+        </div>
+        <div class="stat">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span class="number" data-target="10">0</span>
+          <span class="label">Years of Service</span>
+        </div>
       </div>
-      <div class="stat">
-        <span class="number" data-target="10">0</span>
-        <span class="label">Years of Service</span>
-      </div>
+
     </div>
-
-  </section>
+  </header>
 
   <!-- ================= MISSION SECTION ================= -->
   <section id="mission" class="section mission-section">
-
-    <h1 class="title">Our Mission</h1>
-
-    <div class="book">
-      <div class="page left-page">
-        <p>
-          Nearly <strong>1 in 5</strong> rural children in South India lack
-          consistent access to quality education. This gap limits opportunity,
-          innovation, and long-term economic mobility.
-        </p>
+    <div class="container">
+      <div class="section-header center">
+        <div class="kicker">Core Philosophy</div>
+        <h2 class="title">Our Mission</h2>
+        <p class="subtitle">We don't just provide supplies; we build ecosystems of learning that sustain themselves for generations.</p>
       </div>
 
-      <div class="page right-page">
-        <p>
-          We believe every child has a capable mind. Through mentorship,
-          infrastructure, and access to learning resources, we empower students
-          to become future leaders who can change the world.
-        </p>
+      <div class="book fade-scroll">
+        <div class="page left-page">
+          <h3>The Challenge</h3>
+          <p>
+            Nearly <strong>1 in 5</strong> rural children in South India lack
+            consistent access to quality education. This gap limits opportunity,
+            innovation, and long-term economic mobility. Without digital literacy, 
+            an entire generation risks being left behind in the modern economy.
+          </p>
+          <div class="data-point">
+            <span class="dp-val">18%</span>
+            <span class="dp-label">Literacy Gap</span>
+          </div>
+        </div>
+
+        <div class="page right-page">
+          <h3>The Solution</h3>
+          <p>
+            We believe every child has a capable mind. Through mentorship,
+            infrastructure, and access to learning resources, we empower students
+            to become future leaders who can change the world.
+          </p>
+          <div class="signature">
+            <p>The Minerva Team</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="values-wrapper center">
+        <button id="missionBtn" class="btn btn-outline">Reveal Core Values</button>
+        <ul id="values" class="hidden-list hidden">
+          <li class="value-item"><span class="check">✓</span> Equity in Education</li>
+          <li class="value-item"><span class="check">✓</span> Community Empowerment</li>
+          <li class="value-item"><span class="check">✓</span> Sustainable Learning</li>
+          <li class="value-item"><span class="check">✓</span> Leadership Development</li>
+        </ul>
       </div>
     </div>
-
-    <button id="missionBtn">Reveal Core Values</button>
-
-    <ul id="values" class="hidden">
-      <li>Equity in Education</li>
-      <li>Community Empowerment</li>
-      <li>Sustainable Learning</li>
-      <li>Leadership Development</li>
-    </ul>
-
   </section>
+
+  <!-- ================= PROGRAMS SECTION ================= -->
+  <section id="programs" class="section programs-section">
+    <div class="container">
+      <div class="section-header left">
+        <div class="kicker">What We Do</div>
+        <h2 class="title">Our Initiatives</h2>
+      </div>
+
+      <div class="grid-3 stack-32">
+        <!-- Program 1 -->
+        <div class="program-card fade-scroll">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <h3>Digital Literacy</h3>
+          <p>Setting up computer labs in remote villages to ensure students can code, research, and connect with the world.</p>
+          <ul class="feature-list">
+            <li>Python Workshops</li>
+            <li>Internet Access</li>
+            <li>Hardware Supply</li>
+          </ul>
+        </div>
+
+        <!-- Program 2 -->
+        <div class="program-card fade-scroll delay-100">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>Mentorship</h3>
+          <p>Connecting industry professionals with rural students to guide their career paths and academic choices.</p>
+          <ul class="feature-list">
+            <li>1-on-1 Guidance</li>
+            <li>Career Webinars</li>
+            <li>Skill Assessments</li>
+          </ul>
+        </div>
+
+        <!-- Program 3 -->
+        <div class="program-card fade-scroll delay-200">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+          <h3>Scholarships</h3>
+          <p>Financial aid for high-performing students to pursue higher education in STEM fields.</p>
+          <ul class="feature-list">
+            <li>Tuition Coverage</li>
+            <li>Book Allowances</li>
+            <li>Hostel Fees</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STORIES SECTION ================= -->
+  <section id="stories" class="section stories-section">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="title">Success Stories</h2>
+      </div>
+
+      <div class="carousel-container fade-scroll">
+        <button class="nav-btn prev-btn" id="prevSlide">←</button>
+        
+        <div class="carousel-track-container">
+          <ul class="carousel-track" id="track">
+            
+            <li class="carousel-slide current-slide">
+              <div class="testimonial">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">Before Minerva, I had never touched a computer. Now I am studying Computer Science at a top university in Chennai.</p>
+                <div class="author">
+                  <div class="author-avatar" style="background-color: #3b8ff0;">A</div>
+                  <div class="author-info">
+                    <h4>Arjun R.</h4>
+                    <span class="role">Scholarship Recipient</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="carousel-slide">
+              <div class="testimonial">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">The mentorship program opened my eyes to careers I didn't know existed. It changed my life trajectory.</p>
+                <div class="author">
+                  <div class="author-avatar" style="background-color: #296dd0;">L</div>
+                  <div class="author-info">
+                    <h4>Lakshmi P.</h4>
+                    <span class="role">Mentee, Class of '23</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="carousel-slide">
+              <div class="testimonial">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">Minerva's commitment to long-term infrastructure is what makes them different. They don't just visit; they stay.</p>
+                <div class="author">
+                  <div class="author-avatar" style="background-color: #153063;">S</div>
+                  <div class="author-info">
+                    <h4>Suresh K.</h4>
+                    <span class="role">Headmaster, Govt School</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+        <button class="nav-btn next-btn" id="nextSlide">→</button>
+      </div>
+
+      <div class="carousel-nav" id="carouselNav">
+        <button class="carousel-indicator current-slide"></button>
+        <button class="carousel-indicator"></button>
+        <button class="carousel-indicator"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="grid-2 gap-64">
+        
+        <div class="contact-info fade-scroll">
+          <div class="kicker">Get Involved</div>
+          <h2 class="title">Join the Movement</h2>
+          <p class="muted stack-16">
+            Whether you want to volunteer, donate, or partner with us, we'd love to hear from you. Together, we can build a brighter future.
+          </p>
+          
+          <div class="info-list stack-24">
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <strong>Headquarters</strong>
+                <p class="muted">123 Innovation Drive, Tech City, 500081</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📧</span>
+              <div>
+                <strong>Email Us</strong>
+                <p class="muted">hello@minervafoundation.org</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper fade-scroll delay-100">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" class="input" placeholder="Jane Doe" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="input" placeholder="jane@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="interest">I'm interested in...</label>
+              <select id="interest" class="input">
+                <option value="volunteering">Volunteering</option>
+                <option value="partnering">Corporate Partnership</option>
+                <option value="donating">Donating</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="input" rows="4" placeholder="How can we help?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary full-width">Send Message</button>
+            <p class="form-status" id="formStatus"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="foundation-name">Minerva Foundation</h3>
+          <p class="muted">Empowering the next generation through education and technology since 2014.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#stories">Stories</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Non-Profit Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <div class="newsletter-box">
+            <input type="email" placeholder="Enter your email" class="input-sm">
+            <button class="btn-sm">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Minerva Foundation. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="main.js"></script>
 </body>
