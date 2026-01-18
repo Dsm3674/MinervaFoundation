@@ -1,8 +1,3 @@
-/**
- * MINERVA FOUNDATION
- * Main JavaScript File
- * Handles: Animations, Data Logic, UI Interactions, and Canvas Effects.
- */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
@@ -16,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStarfield();
 });
 
-/* ================= 1. HERO TYPEWRITER ================= */
+
 function initTypewriter() {
   const text = "Expanding educational access for rural communities. We believe education is the foundation for long-term change.";
   const typeTarget = document.getElementById("typewriter");
@@ -41,7 +36,7 @@ function initTypewriter() {
   setTimeout(type, 800);
 }
 
-/* ================= 2. NUMBER COUNTERS ================= */
+
 function initCounters() {
   const counters = document.querySelectorAll(".number");
   const speed = 200; // Lower is slower
@@ -73,7 +68,7 @@ function initCounters() {
   counters.forEach(counter => observer.observe(counter));
 }
 
-/* ================= 3. MISSION TOGGLE ================= */
+
 function initMissionToggle() {
   const btn = document.getElementById("missionBtn");
   const list = document.getElementById("values");
@@ -93,7 +88,7 @@ function initMissionToggle() {
   }
 }
 
-/* ================= 4. SCROLL ANIMATIONS ================= */
+
 function initScrollObserver() {
   const fadeElements = document.querySelectorAll('.fade-scroll');
   
@@ -108,7 +103,7 @@ function initScrollObserver() {
   fadeElements.forEach(el => observer.observe(el));
 }
 
-/* ================= 5. MOBILE MENU ================= */
+
 function initMobileMenu() {
   const toggle = document.getElementById('mobileToggle');
   const navLinks = document.getElementById('navLinks');
@@ -131,7 +126,7 @@ function initMobileMenu() {
   }
 }
 
-/* ================= 6. STICKY NAVBAR ================= */
+
 function initNavbarScroll() {
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -143,7 +138,7 @@ function initNavbarScroll() {
   });
 }
 
-/* ================= 7. TESTIMONIAL CAROUSEL ================= */
+
 class Carousel {
   constructor() {
     this.track = document.getElementById('track');
@@ -237,7 +232,7 @@ function initCarousel() {
   }
 }
 
-/* ================= 8. FORM HANDLING ================= */
+
 function initFormHandler() {
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
@@ -269,7 +264,7 @@ function initFormHandler() {
   }
 }
 
-/* ================= 9. CANVAS STARFIELD ================= */
+
 class Star {
   constructor(canvasWidth, canvasHeight) {
     this.x = Math.random() * canvasWidth;
