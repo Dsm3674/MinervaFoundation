@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function initTypewriter() {
-  const text = "Expanding educational access for rural communities. We believe education is the foundation for long-term change.";
+  const text = "Expanding educational access for rural communities offers foundation for long-term change.";
   const typeTarget = document.getElementById("typewriter");
   if (!typeTarget) return;
 
